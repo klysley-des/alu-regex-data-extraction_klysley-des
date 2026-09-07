@@ -7,6 +7,8 @@ import unicodedata
 
 MAX_INPUT_LENGTH = 200000
 
+
+# These patterns detect suspicious input such as script injection, SQL injection, JavaScript URLs, and null injections.
 SUSPICIOUS_PATTERNS = [
     re.compile(r"<script.*?>.*?</script>", re.IGNORECASE | re.DOTALL),
     re.compile(r"javascript:", re.IGNORECASE),
@@ -18,6 +20,7 @@ SUSPICIOUS_PATTERNS = [
 ]
 
 
+# Removes extra spaces and limits the amount of input we process.
 def sanitize_input(raw_text):
     flags = []
 
@@ -40,6 +43,7 @@ def sanitize_input(raw_text):
     return cleaned, flags
 
 
+# Checks if a section of text contains dangerous content.
 def block_is_hostile(block):
     for pattern in SUSPICIOUS_PATTERNS:
         if pattern.search(block):
@@ -48,6 +52,7 @@ def block_is_hostile(block):
     return None
 
 
+# Identifies valid email addresses with a username, domain, and extension.
 EMAIL_PATTERN = re.compile(
     r"(?<![\w.+-])"
     r"[A-Za-z0-9._%+-]+"
@@ -57,6 +62,7 @@ EMAIL_PATTERN = re.compile(
 )
 
 
+# These rules identify the type of ALU email address.
 ALU_DOMAIN_RULES = [
     (
         "ALU SI",
@@ -103,6 +109,7 @@ def validate_email(email):
     return True
 
 
+# Identifies whether an email belongs to ALU or is an external email.
 def classify_email(email):
     for label, pattern in ALU_DOMAIN_RULES:
         if pattern.search(email):
@@ -111,6 +118,7 @@ def classify_email(email):
     return "External"
 
 
+# Finds credit card numbers written with spaces, hyphens, or no spaces.
 CREDIT_CARD_PATTERN = re.compile(
     r"\b(?:"
     r"\d{4}[ -]?\d{6}[ -]?\d{5}"
@@ -120,6 +128,7 @@ CREDIT_CARD_PATTERN = re.compile(
 )
 
 
+# Checks whether a credit card number passes the Luhn check.
 def validate_luhn(card_number):
     digits = re.sub(r"[ -]", "", card_number)
 
@@ -143,12 +152,14 @@ def validate_luhn(card_number):
     return checksum % 10 == 0
 
 
+# Hides most of the card number so sensitive information is not exposed.
 def mask_card(card_number):
     digits = re.sub(r"[ -]", "", card_number)
 
     return "**** **** **** {}".format(digits[-4:])
 
 
+# Finds phone numbers written in different common formats.
 PHONE_PATTERN = re.compile(
     r"(?:"
     r"\+\d{1,3}[ -]?"
@@ -170,6 +181,7 @@ def is_plausible_phone(candidate):
     return 7 <= digit_count <= 15
 
 
+# Finds website addresses that start with HTTP or HTTPS.
 URL_PATTERN = re.compile(
     r"\bhttps?://"
     r"[A-Za-z0-9.-]+"
@@ -179,6 +191,7 @@ URL_PATTERN = re.compile(
 )
 
 
+# Hides part of an email address to protect private information.
 def mask_email(email):
     local, _, domain = email.partition("@")
 
