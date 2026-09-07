@@ -1,25 +1,12 @@
 {
-  "credit_cards": [
-    {
-      "luhn_valid": true,
-      "card_masked": "**** **** **** 6467",
-      "status": "ACCEPTED"
-    },
-    {
-      "luhn_valid": true,
-      "card_masked": "**** **** **** 9424",
-      "status": "ACCEPTED"
-    },
-    {
-      "luhn_valid": true,
-      "card_masked": "**** **** **** 0005",
-      "status": "ACCEPTED"
-    }
-  ],
-  "security_log": [
-    "Block 14 excluded from extraction (entire block discarded) - matched hostile pattern (<script.*?>.*?</script>)",
-    "Block 16 excluded from extraction (entire block discarded) - matched hostile pattern (\\.\\./)"
-  ],
+  "summary": {
+    "phone_numbers_found": 6,
+    "emails_found": 6,
+    "credit_cards_found": 3,
+    "security_flags_raised": 2,
+    "credit_cards_accepted": 3,
+    "urls_found": 3
+  },
   "phone_numbers": [
     "(078) 234-5678",
     "+1 (415) 555 0192",
@@ -28,49 +15,62 @@
     "+254-712-345-678",
     "0788 693 423"
   ],
-  "summary": {
-    "emails_found": 6,
-    "credit_cards_accepted": 3,
-    "urls_found": 3,
-    "security_flags_raised": 2,
-    "credit_cards_found": 3,
-    "phone_numbers_found": 6
-  },
-  "emails": [
+  "credit_cards": [
     {
-      "category": "ALU Official",
-      "valid": true,
-      "email_masked": "la******@alueducation.com"
+      "card_masked": "**** **** **** 6467",
+      "status": "ACCEPTED",
+      "luhn_valid": true
     },
     {
-      "category": "ALU Alumni",
-      "valid": true,
-      "email_masked": "sa*******@alumni.alueducation.com"
+      "card_masked": "**** **** **** 9424",
+      "status": "ACCEPTED",
+      "luhn_valid": true
     },
     {
-      "category": "External",
-      "valid": true,
-      "email_masked": "un************@tempmail-x.ru"
-    },
-    {
-      "category": "ALU SI",
-      "valid": true,
-      "email_masked": "si************@si.alueducation.com"
-    },
-    {
-      "category": "External",
-      "valid": true,
-      "email_masked": "fi*****@eastafrica-services.com"
-    },
-    {
-      "category": "ALU Alumni",
-      "valid": true,
-      "email_masked": "ja********************@alumni.alueducation.com"
+      "card_masked": "**** **** **** 0005",
+      "status": "ACCEPTED",
+      "luhn_valid": true
     }
+  ],
+  "security_log": [
+    "Block 14 excluded from extraction (entire block discarded) - matched hostile pattern (<script.*?>.*?</script>)",
+    "Block 16 excluded from extraction (entire block discarded) - matched hostile pattern (\\.\\./)"
   ],
   "urls": [
     "https://alu.edu/blog/2026/careers",
     "https://drive.google.com/file/d/1a2B3c4D5e/view?usp=sharing",
     "https://payments.alueducation.com/checkout?ref=48213&currency=usd"
+  ],
+  "emails": [
+    {
+      "category": "ALU Official",
+      "email_masked": "la******@alueducation.com",
+      "valid": true
+    },
+    {
+      "category": "ALU Alumni",
+      "email_masked": "sa*******@alumni.alueducation.com",
+      "valid": true
+    },
+    {
+      "category": "External",
+      "email_masked": "un************@tempmail-x.ru",
+      "valid": true
+    },
+    {
+      "category": "ALU SI",
+      "email_masked": "si************@si.alueducation.com",
+      "valid": true
+    },
+    {
+      "category": "External",
+      "email_masked": "fi*****@eastafrica-services.com",
+      "valid": true
+    },
+    {
+      "category": "ALU Alumni",
+      "email_masked": "ja********************@alumni.alueducation.com",
+      "valid": true
+    }
   ]
 }
